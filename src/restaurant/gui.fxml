@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="920.0" stylesheets="@../res/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restaurant.Controller">
+    <children>
+        
+<!--        Strategy-->
+        <ImageView id="DayBackground" fx:id="DayBackground" fitHeight="600.0" fitWidth="920.0" pickOnBounds="true" preserveRatio="true" visible="true">
+            <image>
+                <Image url="@../res/day-background.png" />
+            </image>
+        </ImageView>
+        <ImageView id="NightBackground" fx:id="NightBackground" fitHeight="600.0" fitWidth="920.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../res/night-background.jpg" />
+            </image>
+        </ImageView>
+<!--        Strategy-->
+
+<!--        Command-->
+        <ImageView fitHeight="610.0" fitWidth="920.0" layoutY="449.0" pickOnBounds="true" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <image>
+               <Image url="@../res/lightsoff.png" />
+            </image>
+        </ImageView>
+        <ImageView id="lightImage" fx:id="lightImage" fitHeight="610.0" fitWidth="920.0" pickOnBounds="true" preserveRatio="false" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <image>
+                <Image url="@../res/lightson.png" />
+            </image>
+        </ImageView>
+        <ImageView id="radioImage" fx:id="radioImage" fitWidth="95.0" layoutX="200.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/radio.png" />
+            </image>
+         </ImageView>
+         <ImageView id="aircondImage" fx:id="aircondImage" fitWidth="140.0" layoutX="357.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/aircond.png" />
+            </image>
+         </ImageView>
+<!--        Command-->
+
+
+<!--    AbstractFactory+Template-->
+        <ImageView id="lemonTea" fx:id="lemonTea" fitHeight="78.0" fitWidth="58.0" layoutX="446.0" layoutY="396.0" visible="false">
+            <image>
+                <Image url="@../res/ice lemon tea.png" />
+            </image>
+        </ImageView>
+        <ImageView id="bubbleTea" fx:id="bubbleTea" fitHeight="78.0" fitWidth="40.0" layoutX="396.0" layoutY="396.0" visible="false">
+            <image>
+                <Image url="@../res/bubble tea.png" />
+            </image>
+        </ImageView>
+        <ImageView id="caramelCoffee" fx:id="caramelCoffee" fitHeight="118.0" fitWidth="98.0" layoutX="396.0" layoutY="419.0" visible="false">
+            <image>
+                <Image url="@../res/caramel coffee.png" />
+            </image>
+        </ImageView>
+        <ImageView id="strawberryJuice" fx:id="strawberryJuice" fitHeight="118.0" fitWidth="98.0" layoutX="336.0" layoutY="406.0" visible="false">
+            <image>
+                <Image url="@../res/strawberryjuice.png" />
+            </image>
+        </ImageView>
+<!--    AbstractFactory+Template-->
+
+        <!--        Decorator-->
+        <ImageView id="riceBowl" fx:id="riceBowl" fitHeight="89.0" fitWidth="164.0" layoutX="618.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/riceBowl.png" />
+            </image>
+        </ImageView>
+          <ImageView id="noodleBowl" fx:id="noodleBowl" fitHeight="126.0" fitWidth="121.0" layoutX="637.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/noodleBowl.png" />
+            </image>
+        </ImageView>
+        <ImageView id="fryEggImage" fx:id="fryEggImage" fitHeight="140.0" fitWidth="73.0" layoutX="556.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/fryEggPlate.png" />
+            </image>
+        </ImageView>
+        <ImageView id="soupImage" fx:id="soupImage" fitHeight="182.0" fitWidth="121.0" layoutX="486.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/soupImage.png" />
+            </image>
+        </ImageView>
+        <ImageView id="fishImage" fx:id="fishImage" fitHeight="102.0" fitWidth="104.0" layoutX="681.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/fishImage.png" />
+            </image>
+        </ImageView>
+        <ImageView id="vegiesImage" fx:id="vegiesImage" fitHeight="78.0" fitWidth="88.0" layoutX="586.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+               <Image url="@../res/vegiesImage.png" />
+            </image>
+        </ImageView>
+        <!--        Decorator-->
+
+        <AnchorPane id="panel" layoutY="542.0" prefHeight="62.0" prefWidth="920.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                
+                <!--        Strategy-->
+                <Button id="scene" fx:id="scene" layoutX="5.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Scenery" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="7.0" />
+                <!--        Strategy-->
+                
+                <!--        Command-->
+                <Button id="light" fx:id="light" layoutX="123.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Light" textFill="#000000" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="7.0" />
+                <Button id="radio" fx:id="radio" layoutX="69.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Radio" textFill="#000000" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="69.0" AnchorPane.topAnchor="7.0" />
+                <Button id="aircond" fx:id="aircond" layoutX="173.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Aircond" textFill="#000000" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="173.0" AnchorPane.topAnchor="7.0" />
+                <!--        Command-->
+                
+                <!--    AbstractFactory+Template-->
+                <RadioButton fx:id="StrawberryBtn" layoutX="239.0" layoutY="13.0" mnemonicParsing="false" onAction="#addDrinks" text="Strawberry Juice" textFill="WHITE">
+                    <font>
+                       <Font name="System Bold" size="15.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="CaramelBtn" layoutX="392.0" layoutY="11.0" mnemonicParsing="false" onAction="#addDrinks" text="Caramel Coffee" textFill="WHITE">
+                   <font>
+                      <Font name="System Bold" size="15.0" />
+                   </font>
+                </RadioButton>
+                <RadioButton fx:id="LemonBtn" layoutX="392.0" layoutY="40.0" mnemonicParsing="false" onAction="#addDrinks" text="Lemon Tea" textFill="WHITE">
+                   <font>
+                      <Font name="System Bold" size="15.0" />
+                   </font>
+                </RadioButton>
+                <RadioButton fx:id="BubbleBtn" layoutX="239.0" layoutY="40.0" mnemonicParsing="false" onAction="#addDrinks" text="Bubble Tea" textFill="WHITE">
+                   <font>
+                      <Font name="System Bold" size="15.0" />
+                   </font>
+                </RadioButton>
+                <!--    AbstractFactory+Template-->
+                 
+                      <!--        Decorator-->
+                <Button id="rices" fx:id="rices" disable="false" layoutX="742.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="25.0" prefWidth="88.0" text="Rice" textFill="#ffba5a" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="742.0" AnchorPane.topAnchor="13.0" />
+                <Button id="noodles" fx:id="noodles" disable="false" layoutX="742.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="25.0" prefWidth="88.0" text="Noodle" textFill="#ffba5a" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="742.0" AnchorPane.topAnchor="40.0" />
+                <Button id="fryEggs" fx:id="fryEggs" disable="true" layoutX="618.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Fry Egg" textFill="#ffba5a" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="618.0" AnchorPane.topAnchor="9.0" />
+                <Button id="soups" fx:id="soups" disable="true" layoutX="571.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Soup" textFill="#ffba5a" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="571.0" AnchorPane.topAnchor="9.0" />
+                <Button id="fishs" fx:id="fishs" disable="true" layoutX="530.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" prefWidth="37.0" text="Fish" textFill="#ffba5a" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="9.0" />
+                <Button id="vegies" fx:id="vegies" disable="true" layoutX="677.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#onClick" prefHeight="44.0" text="Vegies" textFill="#ffba5a" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="677.0" AnchorPane.topAnchor="9.0" />
+                <Button id="clearFood" fx:id="clearFood" disable="true" layoutX="839.0" layoutY="16.0" mnemonicParsing="false" onAction="#clearFood" onMouseClicked="#onClick" prefHeight="44.0" text="Clear Food" textFill="#ffba5a" />
+                <!--        Decorator-->
+                
+                
+                 
+            </children>
+        </AnchorPane>
+        <Text fx:id="temperature" fill="RED" fontSmoothingType="LCD" layoutX="785.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="34°C" textAlignment="CENTER" wrappingWidth="121.0">
+            <font>
+               <Font name="System Bold" size="25.0" />
+            </font>
+         </Text>
+          <Text fx:id="caloryFood" fontSmoothingType="LCD" layoutX="695.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="180.0">
+              <font>
+                 <Font name="System Bold" size="15.0" />
+              </font>
+          </Text>
+    </children>
+</AnchorPane>
